@@ -1,0 +1,86 @@
+; primary application configuration options
+[MAIN]
+; If the 'outfile' exists it will be overwritten. Do not include a file extension.  
+; The name is used for the MIDI and the docs files.
+outfile: DefaultWork
+; the 'outpath' must exist and be writable by the current user and it must contain a trailing slash
+outpath: ../ttc_output/
+; set the path to the tool used to display musicxml files/data.
+musicxmlPath: /usr/bin/mscore
+[METADATA]
+composer: Timothy W. Cook
+date: 2016/12/31
+title: My Default Work
+; Add your Copyright Statement. Ex. 2016 - Timothy W. Cook, All Rights Reserved.
+copyright: 2016 - Timothy W. Cook, All Rights Reserved.
+
+; initial composition settings
+[COMP]
+; Mode is either 'Linear' or 'Orchestral'. If it is anything else it defaults to Linear.
+; Linear creates each part in isolation (horizontal then vertical). 
+; Orchestral creates the Parts using elements of each Tonerow (vertical then horizontal).
+Mode: Linear
+; Original Row, must be 12 unique comma separated note names. All flats are converted to sharps. 
+; This OROw contains all intervals and is known as the Mother Chord.
+ORow: F,E,C,A,G,D,Ab,Db,Eb,Gb,Bb,B
+; PCS is the number of pitch class sets to generate for this work.
+PCS: 10
+; Initial tempo in BPM
+Tempo: 120
+; Initial time signature
+TimeSig: 4/4
+; 'Cluster' is an integer value that is the percentage (roughly) of series that will contain clusters of notes (chords)
+Cluster: 35
+; 'ClusterMax' is the maximum number of notes in one cluster.
+ClusterMax: 4
+; Play the same series in sequence on each track? Yes or No
+; If this is No then the marker labels, that indicate which series is being played in the midi file, are meaningless.
+; Also, if this is not Yes then the arrangement options are not used. 
+Same Series: Yes
+; Percentage of series that have repeated notes
+Repeat: 30
+; The most times a not can be repeated in a series.
+RepeatMax: 3
+; 'ROIS' - Randomize the Octave In the Series? Yes or No.
+; Also, if this is Yes then the arrangement options are not used. 
+ROIS: Yes
+
+; Each Part is defined using a two digit Track number with the values being a set of data and codes.
+; For MIDI specs https://www.midi.org/specifications 
+; For instrument ranges see http://www.orchestralibrary.com/reftables/rang.html 
+; Track name terminated with a colon followed by an Instrument name. The instrument name comes from the music21 instrument list:
+; http://web.mit.edu/music21/doc/moduleReference/moduleInstrument.html
+; The track number is also used for the MIDI channel number. The track range is 00...15. Track 10 is reserved for percussion. 
+[PARTS]
+00: Violin
+01: Violin
+02: Viola
+03: Cello
+04: Contrabass
+05: Flute
+06: Flute
+07: Clarinet
+08: Clarinet
+09: Bassoon
+11: Trumpet
+12: Trumpet
+13: Trombone
+14: Tuba
+
+; in the this section enter the series number where you want a time signature change followed by a colon and then the time signature
+; example is 10: 5/16
+[TIMECHANGES]
+3: 5/16
+6: 3/4
+
+; in this section enter the series number where you want a tempo change followed by a colon and then the tempo in BPM
+; example is 10: 132
+[TEMPOCHANGES]
+3: 132
+8: 80
+
+
+;DO NOT EDIT THIS SECTION
+; the SYS section must be in all .ttcd files
+[SYS]
+version: 1.0.0

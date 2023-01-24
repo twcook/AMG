@@ -1,0 +1,18 @@
+ChordalModeExamples.txt
+
+F,E,C,A,G,D,Ab,Db,Eb,Gb,Bb,B
+
+Tone disc: Fig.3a 
+Mode A - dim:
+F,A,Ab,Gb
+B,C,D,Eb
+E,G,Db,Bb
+
+Tone disc: Fig.3b
+Mode A - dim:
+F,A,Ab,Gb
+Gb,F,A,Ab
+E,G,Db,Bb
+
+
+
