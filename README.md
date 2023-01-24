@@ -1,0 +1,2 @@
+# AMG
+Atonal Music Generator
