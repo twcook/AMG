@@ -1,4 +1,5 @@
-# Atonal Music Generator
+# AMG
+ **Atonal Music Generator**
 
 A tool for twelve tone composition based on the concepts promoted by Milton Babbitt https://en.wikipedia.org/wiki/Milton_Babbitt with a bit of Karlheinz Stockhausen https://en.wikipedia.org/wiki/Karlheinz_Stockhausen tossed in for good temporal control.
 

@@ -62,3 +62,7 @@ bin/
 include/
 lib/
 share/
+
+#WingIDE
+AMG.wpu
+AMG.wpr
